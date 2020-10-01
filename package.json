@@ -1,0 +1,21 @@
+{
+  "name": "resizeImages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "resizeImage.js",
+  "dependencies": {
+    "sharp": "^0.26.1"
+  },
+  "devDependencies": {
+    "serverless-offline": "^6.8.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "rm -rf node_modules/sharp && npm i --platform=linux --arch=x64 --target=12.x sharp",
+    "deploy": "serverless deploy -v",
+    "postdeploy": "rm -rf node_modules/sharp && npm i sharp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
